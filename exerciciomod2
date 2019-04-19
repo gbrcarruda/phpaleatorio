@@ -1,2 +1,101 @@
+<html>
+<head>Exercícios módulo 2</head><br><br>
+<body>
 <?php
+/*
+Exercício 1
+Construa uma função que capitaliza (converte para maiúscula) a primeira letra de
+todas as palavras existentes em uma string passada como parâmetro, considerando
+que as palavras da string em questão são separadas com o caracter de espaço em
+branco.
+Para a string "exemplo de string para ser capitalizada" o resultado deve ser "Exemplo
+De String Para Ser Capitalizada ".
+*/
 
+echo "Exercício 01 - Módulo 2"."<BR>";
+
+function capitaliza($frase){
+
+    $frase = ucwords($frase);
+
+    return $frase;
+}
+
+echo capitaliza("um cavalo morto é um animal sem vida")."<BR>";
+//não entendi porque deu uma volta grande no exercício
+echo "*****FIM DO EXERCÍCIO 01*****<br><br><br>";
+
+
+
+
+/*Exercício 2
+Construa uma versão própria da função strrev sem utilizar a função em seu código.
+Para a string "Exemplo de string" o resultado deve ser "gnirts ed olpmexE ".*/
+
+echo "Exercício 02 - Módulo 02<br>";
+
+//para resolver a questão deverei ler cada letra de trás para frente.
+//ação:
+
+function funcao($frase){
+
+//1. contarei a quantidade de bytes utilizados e guardarei
+
+$contagem = strlen($frase);
+$caracteres = (int)$contagem;
+echo "cont vale ".$caracteres."<BR>";
+$split = str_split($frase,1);
+//echo "split->".$split[--$cont]."<BR>";
+
+/*$contagem = strlen($frase);
+$cont = (int)$contagem;
+
+$split = str_split($frase,18);
+echo $split[1];*/
+
+//depois retornarei lendo a informação de cada byte (for)
+//do maior número para o menor(for i--)
+$cont = $caracteres-1;
+echo $cont."<br>"; //conferindo o valor de cont
+echo $caracteres."<br>"; //conferindo o valor de caracteres
+
+
+/*for ($i = 1; $i > 10; $i++){
+//if ($caracteres > $cont){
+    echo "teste do split"."<BR>";
+    //echo $split[$cont]."<BR>";
+*/
+
+    for ($i = $cont; $i > 0; $i--){
+
+    echo "z";
+    }
+
+return ($frase);
+
+}
+
+
+
+
+/*
+Exercício 3
+Construa uma versão própria da função strpos sem utilizar a função em seu código.
+Para a string "Exemplo de string" o resultado deve ser 2.
+Exercício 4
+Construa uma versão própria da função strchr sem utilizar a função em seu código.
+Para a string "Exemplo de string de teste" o resultado deve ser "de string de teste ".
+Exercício 5
+Construa uma versão própria da função strrchr sem utilizar a função em seu código.
+Para a string "Exemplo de string de teste" o resultado deve ser "de teste ".*/
+
+
+
+
+?>
+
+
+
+</body>
+
+</html>
